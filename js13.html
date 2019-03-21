@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /**
+         * @param price 価格
+         * @param tax 税率
+         */
+        function calcFunction(price, tax = 0.08) {
+            const result = price + price * tax;
+            return result;
+        }
+
+        const result1 = calcFunction(100);
+        console.log(result1);
+
+        const result2 = calcFunction(100, 0.1);
+        console.log(result2);
+    </script>
+</body>
+
+</html>

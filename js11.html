@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function myFunction(a) {
+            const result = a + 2;
+            return result;
+        }
+
+        function calcSum(a, b, c) {
+            const result = a + b + c;
+            return result;
+        }
+
+        function myFuncion2() {
+            console.log('こんにちは');
+        }
+
+        function myFunction3() {
+            return 100;
+            // 実行されない
+            console.log('こんにちは');
+        }
+
+        function muFunction4() {
+            //aが100以上なら実行される
+            if (a >= 100) {
+                return a;
+            }
+            return b;
+        }
+
+        function calcFunction(price, tax) {
+            const result = price + price * tax;
+            return result;
+        }
+        // 関数を実行し、戻り値をmuResultに代入する
+        const myResult = calcFunction(100, 0.1);
+        console.log(myResult);
+
+        function myFunction5() {
+            console.log('こんにちは');
+        }
+
+        myFunction5();
+    </script>
+</body>
+
+</html>

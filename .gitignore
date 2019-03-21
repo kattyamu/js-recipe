@@ -1,0 +1,8 @@
+# option files
+#---------------------------
+/.vscode/
+
+# OS dependent files
+#---------------------------
+.DS_Store
+Thumbs.db

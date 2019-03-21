@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log('ふうたろう' === 'ふうたろう', 10 < 30, 20 >= 30);
+
+        const array1 = [1, 2, 3];
+        const array2 = [1, 2, 3];
+        console.log(array1 === array2); //false 参照先が異なるため。
+
+        const array3 = [1, 2, 3];
+        const array4 = array3;
+        console.log(array3 === array4); //true 参照先が同じため。
+
+        console.log(10 == '10'); //true
+        console.log(10 === '10'); //false
+        console.log(20 != '20'); //false
+        console.log(20 !== '20'); //true
+    </script>
+</body>
+
+</html>
