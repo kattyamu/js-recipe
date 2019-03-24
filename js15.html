@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const myPrice = 100;
+
+        if (myPrice >= 50) {
+            alert('myPriceは50以上です。');
+        } else if (myPrice >= 10) {
+            alert('myPriceは10以上50未満です。');
+        } else {
+            alert('myPriceは10未満です。');
+        }
+
+        if (true) {
+            alert('Hello');
+        }
+
+        const randomNum = Math.random() * 10;
+
+        if (randomNum >= 5) {
+            alert('randomNumは5以上');
+        } else {
+            alert('randomNumは5未満');
+        }
+
+        const randomNum2 = Math.random() * 10;
+        // ブレース内の処理が1行だけの場合は{}は省略できる。
+        // しかしコードの見通しが悪くなるので略さない方が良い。
+        if (randomNum2 >= 5) alert('randomNumは5以上です。');
+    </script>
+</body>
+
+</html>

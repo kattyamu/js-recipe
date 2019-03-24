@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 数値はnumber型
+        const a = 10;
+        const b = 1.23;
+        const c = -5;
+    </script>
+    <h2>数値（number型）を用いてできること</h2>
+    <table>
+        <tr>
+            <th>数学的な計算をする</th>
+            <td>10の2乗を計算するなど</td>
+        </tr>
+        <tr>
+            <th>数値を四捨五入する</th>
+            <td>税込み金額を整数にまるめるなど</td>
+        </tr>
+        <tr>
+            <th>三角数を扱う</th>
+            <td>アニメーションの軌跡を求めるなど</td>
+        </tr>
+        <tr>
+            <th>ランダムな数値を扱う</th>
+            <td>アニメーションにランダム性を持たせるなど</td>
+        </tr>
+    </table>
+    <h2>数値の表記方法</h2>
+    <table>
+        <tr>
+            <th>意味</th>
+            <th>表記例</th>
+        </tr>
+        <tr>
+            <th>10進数</th>
+            <td>10 240 12400 3.14</td>
+        </tr>
+        <tr>
+            <th>16進数</th>
+            <td>0xFF0000 0xcccccc</td>
+        </tr>
+        <tr>
+            <th>8進数</th>
+            <td>0o123 0o7777</td>
+        </tr>
+        <tr>
+            <th>2進数</th>
+            <td>0b111 0b0101010</td>
+        </tr>
+    </table>
+    <h2>表示できる数値の限界</h2>
+    <table>
+        <tr>
+            <th>定数</th>
+            <th>意味</th>
+        </tr>
+        <tr>
+            <th>Number.MAX_VALUE</th>
+            <td>最大の整数</td>
+        </tr>
+        <tr>
+            <th>Number.MIN_VALUE</th>
+            <td>最小の「正の」整数</td>
+        </tr>
+        <tr>
+            <th>Number.MAX_SAFE_INTEGER</th>
+            <td>正確に扱える最大の整数</td>
+        </tr>
+        <tr>
+            <th>Number.MIN_SAFE_INTEGER</th>
+            <td>正確に扱える最小の整数</td>
+        </tr>
+    </table>
+    <p>正確に扱える数値の範囲外では、計算結果に誤差が生じる。</p>
+    <h2>不正な計算結果の場合などに返される特別な値</h2>
+    <table>
+        <tr>
+            <th>定数</th>
+            <th>意味</th>
+            <th>値</th>
+        </tr>
+        <tr>
+            <th>NaN</th>
+            <td>数値でない値。不正な計算結果の場合などに返される。</td>
+            <td>NaN</td>
+        </tr>
+        <tr>
+            <th>Number.POSITIVR_INFINITY</th>
+            <td>正の無限の値</td>
+            <td>Infinity</td>
+        </tr>
+        <tr>
+            <th>Number.NEGATIVE_INFINITY</th>
+            <td>負の無限の値</td>
+            <td>-Infinity</td>
+        </tr>
+    </table>
+</body>
+
+</html>

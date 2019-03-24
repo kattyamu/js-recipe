@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const a = 10;
+        const b = 20;
+
+        console.log(a < b); // 結果： true
+        console.log(a > b); // 結果： false
+
+        // iPhoneかどうかの判定
+        const isIOs = navigator.userAgent.includes('iPhone');
+
+        if (isIOs) {
+            // iOS用の処理
+        }
+
+        // 「こんにちは鈴木さん」とアラートが表示される。
+        const userName = '鈴木';
+        if (userName) {
+            alert(`こんにちは${userName}さん`);
+        }
+
+        // addressが''なので、アラートは表示されない。
+        const address = '';
+        if (address) {
+            alert(`あなたは${userName}に住んでいますね？`);
+        }
+
+        // JavaScriptに「a」が含まれるかどうか。
+        const flg = 'JavaScript'.includes('a');
+        console.log(!flg); // 結果：false（論理否定演算子を使用しているため）
+
+        // 真偽値型（Boolean型）以外の型は真偽値型に変換される。
+        console.log(!'鈴木'); // 結果：false
+        console.log(!24); // 結果：false
+        console.log(![1, 2, 3]); // 結果：false
+
+        // !（エクスクラメーションマーク）を2個付与することで、データをBoolean型に変換できる。
+        console.log(!!'鈴木'); // 結果： true
+        console.log(!!24); // 結果：true
+        console.log(!![1, 2, 3]); // 結果：true
+
+    </script>
+</body>
+
+</html>

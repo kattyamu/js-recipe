@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const myFruit = 'いちご';
+
+        switch (myFruit) {
+            // case句
+            case 'りんご':
+                alert('りんごです。');
+                break;
+            // case句
+            case 'みかん':
+                alert('みかんです。');
+                break;
+            // default句
+            default:
+                alert('その他です。');
+                break;
+        }
+
+        const myFruit2 = 'りんご';
+
+        switch (myFruit2) {
+            //case句
+            case 'りんご':
+            case 'みかん':
+                alert('りんごかみかんです。');
+                break;
+            // default句
+            default:
+                alert('その他です。');
+                break;
+        }
+
+        const myFruit3 = 'りんご';
+
+        switch (myFruit3) {
+            //case句
+            case 'りんご':
+            case 'みかん':
+                alert('りんごかみかんです。');
+                break;
+            // defaultは省略
+        }
+
+        // switchの式は厳密な等価（===）で比較される。
+        const myValue = '100'; // 文字列の'100'
+
+        switch (myValue) {
+            case 100:
+                // 文字列の'100'ではないので実行されない。
+                console.log('数字の100です');
+                break;
+            default:
+                console.log('数字の100ではありません、文字列の100です。');
+                break;
+        }
+    </script>
+</body>
+
+</html>
