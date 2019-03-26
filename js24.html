@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th colspan="2">数値の絶対値を計算する</th>
+        </tr>
+        <tr>
+            <td>Math.abs(-10);</td>
+            <td class="result01"></td>
+        </tr>
+        <tr>
+            <th colspan="2">べき乗（数値Aの数値B乗）を計算する</th>
+        </tr>
+        <tr>
+            <td>Math.pow(2, 10);</td>
+            <td class="result02"></td>
+        </tr>
+        <tr>
+            <th colspan="2">階乗</th>
+        </tr>
+        <tr>
+            <td>2 ** 10</td>
+            <td class="result03"></td>
+        </tr>
+        <tr>
+            <th colspan="2">数値符号を計算する（-10なら-1、21なら1、0の場合は0）</th>
+        </tr>
+        <tr>
+            <td>Math.sign(2);</td>
+            <td class="result04"></td>
+        </tr>
+        <tr>
+            <td>Math.sign(-2);</td>
+            <td class="result05"></td>
+        </tr>
+        <tr>
+            <th colspan="2">数値の平方根（√2など）を計算する</th>
+        </tr>
+        <tr>
+            <td>Math.sqrt(16);</td>
+            <td class="result06"></td>
+        </tr>
+        <tr>
+            <th colspan="2">自然対数を計算する<br>Math.E → 自然対数の底（ネイピア数 e）を返す</th>
+        </tr>
+        <tr>
+            <td>Math.log(Math.E);</td>
+            <td class="result07"></td>
+        </tr>
+        <tr>
+            <th colspan="2">指数関数（eの累乗）を返す</th>
+        </tr>
+        <tr>
+            <td>Math.exp(10);</td>
+            <td class="result08"></td>
+        </tr>
+    </table>
+    <script>
+        document.querySelector('.result01').innerHTML = Math.abs(-10);
+        document.querySelector('.result02').innerHTML = Math.pow(2, 10);
+        document.querySelector('.result03').innerHTML = 2 ** 10;
+        document.querySelector('.result04').innerHTML = Math.sign(2);
+        document.querySelector('.result05').innerHTML = Math.sign(-2);
+        document.querySelector('.result06').innerHTML = Math.sqrt(16);
+        document.querySelector('.result07').innerHTML = Math.log(Math.E);
+        document.querySelector('.result08').innerHTML = Math.exp(10);
+    </script>
+</body>
+
+</html>

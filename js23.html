@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .rectangle {
+            width: 100%;
+            height: calc(100vh - 50px);
+            --start: hsl(0, 100%, 50%);
+            --end: hsl(332, 100%, 50%);
+            background-image: linear-gradient(-135deg, var(--start), var(--end));
+        }
+    </style>
+
+    <!-- ボタン -->
+    <button class="button">カラー変更</button>
+    <!-- グラデーションが表示される長方形 -->
+    <div class="rectangle"></div>
+
+    <script>
+        // 使い方
+        Math.random(); // 0以上1未満のランダムな少数
+        Math.floor(Math.random() * 100); // 0以上100未満のランダムな整数
+        10 + Math.floor(Math.random() * 10); // 10以上20未満のランダムな整数
+
+        /** 長方形 */
+        const rectangle = document.querySelector('.rectangle');
+
+        // ボタンをクリックしたらonClickButton()を実行する
+        document.querySelector('.button').addEventListener('click', onClickButton);
+
+        // ボタンをクリックする度に、長方形のグラデーションを変更
+        function onClickButton() {
+            // 0~360の間のランダムな数を取得する
+            const randomHue = Math.trunc(Math.random() * 360);
+            // グラデーションの開始色と終了色を決定
+            const randomColorStart = `hsl(${randomHue}, 100%, 50%)`;
+            const randomColorEnd = `hsl(${randomHue + 40}, 100%, 50%)`;
+
+            // 長方形のグラデーションのための変数(--startと--end)を変更
+            rectangle.style.setProperty('--start', randomColorStart);
+            rectangle.style.setProperty('--end', randomColorEnd);
+        }
+
+        // 安心な乱数を使いたいならcrypto.getRandomValues()を使う
+        // ランダムな整数(16ビット符号なし)が10個格納された配列を生成する
+        // 例:[8918, 14634, 53220, 62158, 64876, ...]
+        const randomArray1 = crypto.getRandomValues(new Uint16Array(10));
+        // 配列を繋げて乱数を作成
+        // 891814634532206215864876 ...
+        console.log(randomArray1.join(''));
+
+        // 32ビット符号なしの配列を用いて乱数を作成
+        // 例：89030296873337467400372283 ...
+        const randomArray2 = crypto.getRandomValues(new Uint32Array(10)).join('');
+        console.log(randomArray2);
+    </script>
+
+</body>
+
+</html>

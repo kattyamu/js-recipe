@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Math.round(6.14)</th>
+            <td class="result01"></td>
+        </tr>
+        <tr>
+            <th>Math.floor(6.14)</th>
+            <td class="result02"></td>
+        </tr>
+        <tr>
+            <th>Math.ceil(6.14)</th>
+            <td class="result03"></td>
+        </tr>
+        <tr>
+            <th>Math.trunc(6.14)</th>
+            <td class="result04"></td>
+        </tr>
+        <tr>
+            <th>Math.round(7.8)</th>
+            <td class="result05"></td>
+        </tr>
+        <tr>
+            <th>Math.floor(7.8</th>
+            <td class="result06"></td>
+        </tr>
+        <tr>
+            <th>Math.ceil(7.8)</th>
+            <td class="result07"></td>
+        </tr>
+        <tr>
+            <th>Math.trunc(7.8)</th>
+            <td class="result08"></td>
+        </tr>
+        <tr>
+            <th>Math.round(-7.49)</th>
+            <td class="result09"></td>
+        </tr>
+        <tr>
+            <th>Math.round(-7.5)</th>
+            <td class="result10"></td>
+        </tr>
+        <tr>
+            <th>Math.round(-7.51)</th>
+            <td class="result11"></td>
+        </tr>
+        <tr>
+            <th>Math.floor(-8.6)</th>
+            <td class="result12"></td>
+        </tr>
+        <tr>
+            <th>Math.ceil(-8.6)</th>
+            <td class="result13"></td>
+        </tr>
+        <tr>
+            <th>Math.trunc(-8.6)</th>
+            <td class="result14"></td>
+        </tr>
+    </table>
+    <script>
+        document.querySelector('.result01').innerHTML = Math.round(6.14); // 結果：6
+        document.querySelector('.result02').innerHTML = Math.floor(6.14); // 結果：6
+        document.querySelector('.result03').innerHTML = Math.ceil(6.14); // 結果：7
+        document.querySelector('.result04').innerHTML = Math.trunc(6.14); // 結果：6
+        document.querySelector('.result05').innerHTML = Math.round(7.8); // 結果：8
+        document.querySelector('.result06').innerHTML = Math.floor(7.8); // 結果：7
+        document.querySelector('.result07').innerHTML = Math.ceil(7.8); // 結果：8
+        document.querySelector('.result08').innerHTML = Math.trunc(7.8); // 結果：7
+
+        // 負の値の場合
+        document.querySelector('.result09').innerHTML = Math.round(-7.49); //結果：-7(小数点が0.5以上なので切り上げられる)
+        document.querySelector('.result10').innerHTML = Math.round(-7.5); //結果：-7(小数点が0.5以上なので切り上げられる)
+        document.querySelector('.result11').innerHTML = Math.round(-7.51); //結果：-8(小数点が0.5以上なので切り下げられる)
+
+        document.querySelector('.result12').innerHTML = Math.floor(-8.6); // -8.6以下の最大の整数-9を返す
+        document.querySelector('.result13').innerHTML = Math.ceil(-8.6); // -8.6以上の最小の整数-8を返す
+
+        document.querySelector('.result14').innerHTML = Math.trunc(-8.6); // 整数部分の-8を返す
+    </script>
+</body>
+
+</html>
