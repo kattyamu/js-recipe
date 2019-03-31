@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const myString = 'JavaScriptを覚えよう';
+
+        const a1 = myString.indexOf('JavaScript');
+        console.log(a1);
+
+        const a2 = myString.indexOf('覚えよう');
+        console.log(a2);
+
+        const a3 = myString.lastIndexOf('a');
+        console.log(a3);
+
+        const b1 = myString.indexOf('HTML');
+        console.log(b1);
+
+        const b2 = myString.indexOf('j');
+        console.log(b2);
+
+        const c1 = myString.indexOf('JavaScript', 7);
+        console.log(c1);
+
+        const s1 = myString.search(/JavaScript/);
+        console.log(s1);
+
+        const s2 = myString.search(/HTML/);
+        console.log(s2);
+    </script>
+</body>
+
+</html>

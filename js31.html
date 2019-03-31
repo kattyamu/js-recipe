@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        table {
+            text-align: left;
+            border-collapse: collapse;
+        }
+
+        table th {
+            font-weight: normal;
+        }
+
+        h1,
+        h2 {
+            font-weight: normal;
+        }
+
+        button {
+            display: block;
+        }
+
+        label {
+            display: block;
+        }
+
+        body {
+            background-color: #f7f7f7;
+        }
+
+        button {
+            text-decoration: none;
+            color: black;
+            background-color: #f5f4e8;
+            text-align: center;
+            border: none;
+            border-radius: 4px;
+            display: inline-block;
+            height: 72px;
+            line-height: 72px;
+            padding: 0 32px;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #27bfb3;
+        }
+
+        button:active {
+            background-color: #1d8e82;
+        }
+
+        main {
+            box-sizing: border-box;
+            overflow-y: scroll;
+            text-align: center;
+            font-size: 22px;
+        }
+
+        header {
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            background-color: #2294ff;
+            text-align: center;
+            color: white;
+            font-size: 22px;
+            margin-bottom: 10px;
+            box-shadow: black 0 0 5px;
+        }
+
+        header #search-word-input {
+            width: 60px;
+            height: 30px;
+            font-size: 30px;
+        }
+
+        #prefecture-list {
+            display: grid;
+            height: 100%;
+            gap: 5px;
+            grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+            grid-auto-rows: 72px;
+            align-content: center;
+            padding: 20px;
+            overflow-y: scroll;
+        }
+
+        #prefecture-list button.hide {
+            display: none;
+        }
+
+        #prefecture-list li {
+            color: #fff;
+            background-color: #a3a611;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <header>
+        <lavel>各おしりの最初の数字を入力してください。<input type="text" maxlength="1" id="search-word-input"></lavel>
+    </header>
+
+    <main>
+        <div class="row" id="prefecture-list">
+            <div class="col-md-12"><button data-name="1.柔らかいおしり" data-phonetic="1.やわらかいおしり">1.柔らかいおしり</button></div>
+            <div class="col-md-12"><button data-name="2.硬いおしり" data-phonetic="2.かたいおしり">2.硬いおしり</button></div>
+            <div class="col-md-12"><button data-name="3.素敵なおしり" data-phonetic="3.すてきなおしり">3.素敵なおしり</button></div>
+        </div>
+
+    </main>
+    <script>
+        const myString = 'JavaScript';
+
+        const a1 = myString.charAt(3);
+        console.log(a1);
+
+        const a2 = myString.charAt();
+        console.log(a2);
+
+        const searchWordText = document.querySelector('#search-word-input');
+
+        const prefetureList = document.querySelectorAll('#prefecture-list button');
+
+        searchWordText.addEventListener('keyup', () => {
+            const searchWord = searchWordText.value;
+
+            prefetureList.forEach((element) => {
+                if (!searchWord || searchWord === '') {
+                    element.classList.remove('hide');
+                    return;
+                }
+
+                const prefectureName = element.dataset.name;
+
+                const phonetic = element.dataset.name;
+
+                if (
+                    searchWord.charAt(0) === prefectureName.charAt(0) ||
+                    searchWord.charAt(0) === phonetic.charAt(0)
+                ) {
+                    element.classList.remove('hide');
+                } else {
+                    element.classList.add('hide');
+                }
+            });
+        });
+
+
+
+
+    </script>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+    integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+    crossorigin="anonymous"></script>
+
+</html>

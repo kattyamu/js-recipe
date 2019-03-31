@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <textarea class="textarea" name="" id="" cols="30" rows="10"></textarea>
+    <p>現在<span class="string_num">0</span>文字入力中です</p>
+    <script>
+        let textarea = document.querySelector('.textarea');
+
+        let string_num = document.querySelector('.string_num');
+
+        textarea.addEventListener('keyup', onKeyUp);
+
+        function onKeyUp() {
+            const inputText = textarea.value;
+
+            string_num.innerText = inputText.length;
+        }
+    </script>
+
+    <p>JacaScriptでは基本的に一文字あたりを2バイトで表現する。</p>
+    <p>そのため絵文字や特殊文字、特殊な漢字など4バイトで表現されるもの（<strong>サロゲートペア</strong>）は<br>
+        lengthで文字列の長さを取得しても1にはならない。</p>
+    <p>サロゲートペアを一文字としてカウントするにはスプレッド演算子（...）を用いる。</p>
+    <p>例（😊などを打ち込んで比較してみてください。）</p>
+    <p>スプレッド演算子なし↑：string_num.innerText = inputText.length;</p>
+    <p>スプレッド演算子あり↓：string_num.innerText = [...inputText].length;</p>
+
+    <textarea class="textarea2" name="" id="" cols="30" rows="10"></textarea>
+    <p>現在<span class="string_num2">0</span>文字入力中です</p>
+    <script>
+        let textarea2 = document.querySelector('.textarea2');
+
+        let string_num2 = document.querySelector('.string_num2');
+
+        textarea2.addEventListener('keyup', onKeyUp2);
+
+        function onKeyUp2() {
+            const inputText2 = textarea2.value;
+
+            string_num2.innerText = [...inputText2].length;
+        }
+    </script>
+</body>
+
+</html>
